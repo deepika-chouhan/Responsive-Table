@@ -121,15 +121,18 @@ function sortHeader(e) {
 
 
 function searchTable() {
-  handleFilter();
-  removeSortAttrs();
+  let inputValue = document.getElementById("myInput").value.toLowerCase().trim();
+  if (inputValue !== '') {
+    handleFilter();
+    removeSortAttrs();
+  }
 };
 
 function handleFilter() {
   let trs = document.querySelectorAll('tbody tr');
   let inputElements = document.querySelectorAll("input:not(#myInput)");
   let filteredInputElements = [...inputElements].filter(input => input.value.trim() !== '');
-  inputValue = document.getElementById("myInput").value.toLowerCase();
+  inputValue = document.getElementById("myInput").value.toLowerCase().trim();
 
     let filteredTrs = [...trs].filter(tr => {
       let showSearchRow = inputValue !== '' ? tr.innerText.toLowerCase().includes(inputValue) : true;
