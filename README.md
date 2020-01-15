@@ -9,3 +9,9 @@
 ### Perfect scenario
 filled extra value as "more", and on clicking on the cell, a pop-up appears with another table [as the
 value of this key is another object].
+
+
+Technologies used:
+1. Javascript
+2. HTML
+3. CSS
